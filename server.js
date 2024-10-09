@@ -16,10 +16,14 @@ const corsOptions = {
 //     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
 //     "preflightContinue": false,
 //     "optionsSuccessStatus": 204
+//app.use(express.static('public'));
+//Serves static files (like images, stylesheets, JavaScript files) from the public directory. When clients request files, they will be served from here.
+
 //   }
 
 app.use(cors(corsOptions))
 app.use(express.static('public'));
+//Serves static files (like images, stylesheets, JavaScript files) from the public directory. When clients request files, they will be served from here.
 
 const connectDB = require('./config/db');
 connectDB();
